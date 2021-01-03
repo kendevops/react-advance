@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 
 const ErrorExample = () => {
-  const [title, setTitle] = useState("Random Title");
+  const [title, setTitle] = useState("random title");
   const handleClick = (e) => {
-    setTitle("Hello People");
-    console.log(title);
+    if (title === "random title") {
+      setTitle("hello people");
+    } else {
+      setTitle("random title");
+    }
   };
   return (
     <>
