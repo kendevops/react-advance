@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const ErrorExample = () => {
   const [title, setTitle] = useState("Random Title");
   const handleClick = (e) => {
-    e.target.setTitle = "Hello People";
+    setTitle("Hello People");
     console.log(title);
   };
   return (
