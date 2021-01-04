@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ErrorExample = () => {
-  const [title, setTitle] = useState("random title");
-  const handleClick = (e) => {
-    if (title === "random title") {
-      setTitle("hello people");
-    } else {
-      setTitle("random title");
-    }
+  let title = 'random title';
+
+  const handleClick = () => {
+    title = 'hello people';
+    console.log(title);
   };
   return (
-    <>
+    <React.Fragment>
       <h2>{title}</h2>
-      <button className="btn" onClick={handleClick}>
-        Change Title
+      <button type='button' className='btn' onClick={handleClick}>
+        change title
       </button>
-    </>
+    </React.Fragment>
   );
 };
 
